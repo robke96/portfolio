@@ -1,0 +1,50 @@
+---
+
+---
+<div class="container">
+    <p>Hi there 👋, I'm</p>
+        <h1>Robertas</h1>
+    <p>
+        <span style="color: #FDB913;">Developer</span>
+        <span style="color: #006A44;">from</span>
+        <span style="color: #C1272D;">Lithuania</span>
+    </p>
+</div>
+
+<style lang="scss">
+    .container {
+        font-size: 1rem;
+        display: flex;
+        width: 100vw;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 1;
+
+        h1 {
+            font-family: 'CalibreBold';
+            font-size: 8em;
+            background: linear-gradient(to right,#818cf8,#e0e7ff,#38bdf8,#e879f9,#38bdf8,#e0e7ff,#818cf8);
+            background-clip: text;
+            text-fill-color: transparent;
+            background-size: 500% auto;
+            animation: textShine 7s ease-in-out infinite alternate;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        } 
+      
+        p {
+            font-size: 1.625em; 
+        }
+    }
+
+    @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+</style>
