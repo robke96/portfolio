@@ -1,7 +1,7 @@
 import avatarImage from "@/assets/images/avatar.webp";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import Status from "./Status";
-import { CalendarDays, ClockIcon, CoffeeIcon, DownloadIcon, EarthIcon, GithubIcon, GuitarIcon, HouseIcon, Icon, MailboxIcon, MapPinHouseIcon } from "lucide-react";
+import { CalendarDays, ClockIcon, CoffeeIcon, DownloadIcon, EarthIcon, GithubIcon, HouseIcon, MailboxIcon, MapPinHouseIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 
@@ -28,34 +28,36 @@ const ProfileCard = () => {
     { Icon: HouseIcon, label: "Freelancer" },
     { Icon: CoffeeIcon, label: "Coffee Addict" },
     { Icon: ClockIcon, label: getLithuaniaTimezone()},
-    { Icon: GuitarIcon, label: "Guitar Enthusiast"}
   ]
 
   return (
     <Card className='dark w-max'>
-        <CardHeader className="flex flex-row relative">
-            <img className="rounded-2xl w-32" src={avatarImage.src} alt="Profile pic" />
-            <div className="ml-3 pb-5 flex flex-col justify-center">
-              <CardTitle className='text-5xl'>Robertas</CardTitle>
-              <CardDescription className="font-bold text-md">I’m a <span className="text-green-800">Full Stack Developer</span></CardDescription>
-            </div>
-            <div className="absolute right-10">
-              <Status available={true} />
+        <CardHeader className="flex flex-row items-center">
+            <img className="rounded-2xl w-24 h-24" src={avatarImage.src} alt="Profile pic" />
+            <div className="ml-3 pb-5 w-full flex flex-col justify-center">
+              <Status className="mt-2 order-1 sm:order-none sm:self-end" available={true} />
+              <CardTitle className='text-2xl sm:text-4xl'>Robertas</CardTitle>
+              <CardDescription className="font-bold text-sm">I’m a <span className="text-green-800">Full Stack Developer</span></CardDescription>
             </div>
         </CardHeader>
         <CardContent>
           {/* tags */}
-          <div className='bg-bg-dark rounded-lg p-4 max-w-xl'>
+          <div className='bg-bg-dark flex max-w-[50vh] flex-wrap gap-2 rounded-xl p-3'>
               {tags.map(({ Icon, label }) => (
-                <Badge key={label} variant="secondary" className="m-1 w-max hover:scale-105 transition duration-300 ease-in-out"><Icon className="mr-2" />{label}</Badge>
+                <Badge key={label} variant="secondary" className="flex flex-row items-center gap-1 rounded-xl bg-secondary/60 py-1 pl-3 pr-4 transition duration-300 hover:scale-105 max-md:grow">
+                  <Icon className="mr-2" />
+                  <p>{label}</p>
+                </Badge>
               ))}
           </div>
-          {/* buttons */}
-          <div className="flex flex-col justify-between w-full md:flex-row md:gap-5">
+          {/* buttons links */}
+          <div className="flex flex-col md:justify-between md:flex-row">
             {buttons.map(({ Icon, href, label}, index) => (
-              <Button className={`w-full mt-5 px-10 ${index === 0 ? 'bg-green-800 hover:bg-green-900' : ''}`} variant="secondary" key={href}>
-                <Icon />
-                {label}
+              <Button asChild className={`mt-5 ${index === 0 ? 'bg-green-800 text-white hover:bg-green-900' : ''}`} key={href}>
+                <a href={href}>
+                  <Icon />
+                  {label}
+                </a>
               </Button>
             ))}
           </div>
