@@ -7,16 +7,15 @@ const Clock = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());
-    }, 1000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <Card className="dark py-5 px-12 flex text-2xl items-center justify-center h-full font-zodiak">
-        <time>{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})}</time>
+    <Card className="dark flex py-6 text-3xl text-center justify-center items-center font-zodiak">
+        <time>{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</time>
     </Card>
   )
 }
-
 export default Clock
