@@ -3,9 +3,8 @@ import { ArrowLeft } from 'lucide-react'
 
 const BackHomeBtn = () => {
   return (
-    <Button variant='secondary'>
-        <ArrowLeft />
-        <a href='/'>Back to Home</a>
+    <Button asChild variant='secondary'>
+        <a className='flex gap-2 items-center' href='/'><ArrowLeft /> Back to Home</a>
     </Button>
   )
 }

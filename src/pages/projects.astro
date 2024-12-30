@@ -3,12 +3,14 @@ import Layout from "@/layouts/Layout.astro";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import BackHomeBtn from "@/components/Buttons/BackHomeBtn";
 import projectCardsData from "@/assets/data/projectCards";
+import Colors from "@/components/Colors/Colors";
 ---
 <Layout>
   <div class="flex justify-center items-center flex-col p-4">
     <div class="flex flex-col gap-4 my-5">
       <h1 class="text-[#fff] font-geist font-bold uppercase text-4xl">Projects</h1>
       <BackHomeBtn />
+      <!-- <Colors client:load /> -->
     </div>  
     <div class="md:max-w-5xl grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 motion-preset-slide-up">
       {
@@ -25,5 +27,4 @@ import projectCardsData from "@/assets/data/projectCards";
       }
     </div>
   </div>
-  <Layout />
 </Layout>

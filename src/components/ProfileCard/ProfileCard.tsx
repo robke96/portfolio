@@ -37,7 +37,7 @@ const ProfileCard = () => {
             <div className="ml-3 pb-5 w-full flex flex-col">
               <Status className="mt-2 order-1 sm:order-none sm:self-end whitespace-nowrap" available={true} />
               <CardTitle className='text-2xl sm:text-4xl lg:text-5xl'>Robertas</CardTitle>
-              <CardDescription className="font-bold text-sm">I’m a <span className="text-borderHoverColor">Full Stack Developer</span></CardDescription>
+              <CardDescription className="font-bold text-sm">I’m a <span className="text-primary-400">Full Stack Developer</span></CardDescription>
             </div>
         </CardHeader>
         <CardContent>

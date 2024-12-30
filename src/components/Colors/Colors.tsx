@@ -1,32 +1,37 @@
-import colors from 'tailwindcss/colors'
+import { useEffect, useState } from 'react'
 import { Card } from '../ui/card'
-import { useState } from 'react'
+
+const themes = ["red", "yellow", "blue", "purple", "green"]
 
 const Colors = () => {
-  const colorList = [
-    colors.red,
-    colors.yellow,
-    colors.blue,
-    colors.purple,
-    colors.green,
-  ];
+    const [theme, setTheme] = useState<string>(() => {
+        if (typeof window !== 'undefined') {
+          const savedTheme = localStorage.getItem('theme');
+          return savedTheme ? savedTheme.replace('theme_', '') : themes[0];
+        }
+        return themes[0]; // Default theme for SSR
+      });
 
-  const [_, setThemeColor] = useState("");
-  const handleColorChange = (color: string) => {
-    setThemeColor(color);
-    document.documentElement.style.setProperty('--borderHoverColor', color);
-  }
+
+//   update theme on html
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const html = document.documentElement;
+      html.className = ''; // Clear previous classes
+      html.classList.add(`theme_${theme}`);
+      localStorage.setItem('theme', `theme_${theme}`);
+    }
+  }, [theme]);
 
   return (
     <Card className="dark flex py-6 justify-center items-center">
       <div className="flex w-full justify-evenly">
-        {colorList.map((color, index) => (
+        {themes.map((color, index) => (
           <div
             key={index}
-            className={`cursor-pointer w-9 h-9 rounded-full`}
-            style={{ backgroundColor: color[600] }}
-            onClick={() => handleColorChange(color[600])}
-          ></div>
+            className={`cursor-pointer w-9 h-9 rounded-full bg-[${color}]`}
+            onClick={() => setTheme(color)}
+          >{color}</div>
         ))}
       </div>
     </Card>
