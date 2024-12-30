@@ -29,9 +29,10 @@ export const projectCardsData: projectCardI[] = [
     {
       title: "This Portfolio page",
       description: "",
-      img: "/img/avatar.webp",
+      img: "/img/portfolio_page.webp",
       badges: [badges.typescript, badges.nodejs, badges.astro, badges.tailwind, badges.shadcn,],
       codeSrc: "https://github.com/robke96/portfolio",
+      demoSrc: "/"
     },
 ];
 
