@@ -15,7 +15,7 @@ const Projects = () => {
     <Card className='dark'>
         <CardHeader>
             <CardTitle className='flex gap-4 items-center text-3xl'>
-                <BriefcaseIcon size={36} />
+                <BriefcaseIcon size={36} className='text-primary-400' />
                 <h3>Projects</h3>
             </CardTitle>
         </CardHeader>

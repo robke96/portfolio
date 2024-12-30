@@ -27,7 +27,7 @@ const TechStack = () => {
     <Card className='dark w-full pb-1'>
       <CardHeader>
         <CardTitle className='flex items-center text-center text-2xl gap-3'>
-          <LayersIcon />
+          <LayersIcon size={36} className='text-primary-400' />
           <h3>My Skillset</h3>
         </CardTitle>
       </CardHeader>

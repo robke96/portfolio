@@ -45,7 +45,7 @@ const ProfileCard = () => {
           <div className='bg-bg-dark flex max-w-[100%] flex-wrap gap-2 rounded-xl p-3'>
               {tags.map(({ Icon, label }) => (
                 <Badge key={label} variant="secondary" className="flex flex-row items-center gap-1 rounded-xl bg-secondary/60 py-1 pl-3 pr-4 transition duration-300 hover:scale-105 max-md:grow">
-                  <Icon className="mr-2" />
+                  <Icon className="mr-2 text-primary-500" />
                   <p>{label}</p>
                 </Badge>
               ))}

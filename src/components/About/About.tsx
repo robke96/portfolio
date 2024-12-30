@@ -6,7 +6,7 @@ const About = () => {
     <Card className='dark max-w-4xl w-full h-full'>
         <CardHeader>
             <CardTitle className='flex items-center'>
-                <SquareUserRoundIcon size={36} />
+                <SquareUserRoundIcon size={36} className='text-primary-400' />
                 <h3 className='ml-3 text-3xl text-center'>About Me</h3>
             </CardTitle>
         </CardHeader>
