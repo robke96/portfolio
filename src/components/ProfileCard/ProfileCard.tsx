@@ -53,7 +53,7 @@ const ProfileCard = () => {
           {/* buttons links */}
           <div className="flex flex-col md:justify-evenly md:flex-row">
             {buttons.map(({ Icon, href, label}, index) => (
-              <Button asChild className={`mt-4 ${index === 0 ? 'hover:border-borderHoverColor' : ''}`} key={href}>
+              <Button asChild className={`mt-4 ${index === 0 ? 'hover:border-primary-900' : ''}`} key={href}>
                 <a target="_blank" href={href}>
                   <Icon />
                   {label}

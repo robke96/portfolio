@@ -29,9 +29,10 @@ const Colors = () => {
         {themes.map((color, index) => (
           <div
             key={index}
-            className={`cursor-pointer w-9 h-9 rounded-full bg-[${color}]`}
+            className={`cursor-pointer w-9 h-9 rounded-full bg-primary-500`}
+            data-theme={`theme_${color}`}
             onClick={() => setTheme(color)}
-          >{color}</div>
+          ></div>
         ))}
       </div>
     </Card>
