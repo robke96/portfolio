@@ -17,7 +17,7 @@ function getLithuaniaTimezone() {
 const ProfileCard = () => {
   const buttons = [
     { href: "mailto:robertaszencius@gmail.com", Icon: MailboxIcon, label: "Hire Me" },
-    { href: "#", Icon: DownloadIcon, label: "My Resume" },
+    // { href: "#", Icon: DownloadIcon, label: "My Resume" }, // disabled temporary
     { href: "https://github.com/robke96", Icon: SiGithub, label: "Github" },
   ]
 
