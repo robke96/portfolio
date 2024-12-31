@@ -6,7 +6,7 @@ import { SiDiscord, SiLinkedin } from '@icons-pack/react-simple-icons'
 const WorkTogether = () => {
   const links = [
     { href: "https://discordapp.com/users/709811143295762454", Icon: SiDiscord},
-    { href: "mailto:robertaszencius@gmail.co", Icon: MailIcon},
+    { href: "mailto:robertaszencius@gmail.com", Icon: MailIcon},
     { href: "https://www.linkedin.com/in/robertas-ženčius-06974425a", Icon: SiLinkedin},
   ]
 

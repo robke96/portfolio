@@ -4,14 +4,14 @@ import { CalendarDays, ClockIcon, CoffeeIcon, DownloadIcon, EarthIcon, HouseIcon
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { SiGithub } from "@icons-pack/react-simple-icons";
+import moment from "moment-timezone";
 
 // to grab gmt+2 or gmt+3 depending on date;
 function getLithuaniaTimezone() {
-  const lithuaniaDate = new Date().toLocaleString("en-US", { timeZone: "Europe/Vilnius" });
-  const lithuaniaTime = new Date(lithuaniaDate);
+  const offsetMinutes = moment.tz("Europe/Vilnius").utcOffset()
+  const gmtOffset = `GMT${offsetMinutes >= 0 ? "+" : ''}${offsetMinutes / 60}` 
 
-  const offset = -lithuaniaTime.getTimezoneOffset() / 60;
-  return `UTC${offset >= 0 ? "+" : ""}${offset}`;
+  return gmtOffset;
 }
 
 const ProfileCard = () => {

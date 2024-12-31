@@ -29,10 +29,10 @@ const ProjectCard = ({ title, description, img, className, badges, codeSrc, demo
         </CardContent>
         <div className='border-t'>
             <div className='inline-flex w-full justify-evenly text-center p-6'>
-                <Button variant='secondary' disabled={!demoSrc}>
-                    <a className='flex justify-center items-center gap-2' target='_blank' href={demoSrc}><Eye size={32}/>Live Demo</a>
+                <Button asChild={!(!demoSrc)} variant='secondary' disabled={!demoSrc}>
+                    <a className='flex justify-center items-center gap-2 ' target='_blank' href={demoSrc}><Eye size={32}/>Live Demo</a>
                 </Button>
-                <Button variant='secondary' disabled={!codeSrc}>
+                <Button asChild={!(!codeSrc)} variant='secondary' disabled={!codeSrc}>
                     <a className='flex justify-center items-center gap-2' target='_blank' href={codeSrc} ><CodeXml size={32}/>Source</a>
                 </Button>
             </div>

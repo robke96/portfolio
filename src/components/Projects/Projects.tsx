@@ -6,7 +6,7 @@ import Marquee from '../ui/marquee'
 
 const Projects = () => {
   const images = [
-    { src: "/img/comingsoon.webp" },
+    { src: "/img/portfolio_page.webp" },
     { src: "/img/comingsoon.webp" },
     { src: "/img/comingsoon.webp" },
   ]
