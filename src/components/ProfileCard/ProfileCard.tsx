@@ -36,7 +36,7 @@ const ProfileCard = () => {
             <img className="rounded-2xl w-28 h-28" src="/img/avatar.webp" alt="Profile pic" />
             <div className="ml-3 pb-5 w-full flex flex-col">
               <Status className="mt-2 order-1 sm:order-none sm:self-end whitespace-nowrap" available={true} />
-              <CardTitle className='text-2xl sm:text-4xl lg:text-5xl'>Robertas</CardTitle>
+              <h1 className='text-2xl font-semibold sm:text-4xl lg:text-5xl'>Robertas</h1>
               <CardDescription className="font-bold text-sm">I’m a <span className="text-primary-400">Full Stack Developer</span></CardDescription>
             </div>
         </CardHeader>
