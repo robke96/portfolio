@@ -23,11 +23,11 @@ import Projects from "@/components/Projects/Projects";
 					<div class="order-2 md:order-none flex-grow">
 						<Projects />
 					</div>
-					<Colors client:load />
+					<Colors client:idle />
 				</div>
 				<div class="flex flex-col gap-4 md:w-1/2 min-w-0 motion-preset-slide-down-sm md:motion-preset-slide-up motion-delay-700">
 					<div class="flex-grow">
-						<Clock client:load />
+						<Clock client:idle />
 					</div>
 					<TechStack />
 				</div>
