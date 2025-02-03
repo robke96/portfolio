@@ -1,0 +1,29 @@
+---
+import { MailIcon, MessageCircleMoreIcon } from 'lucide-react'
+import { SiDiscord, SiLinkedin } from '@icons-pack/react-simple-icons'
+import { Card, CardTitle } from '@/components/ui/card'
+import { buttonVariants } from '@/components/ui/button'
+
+const links = [
+    { href: "https://discordapp.com/users/709811143295762454",  Icon: SiDiscord},
+    { href: "mailto:robertaszencius@gmail.com", Icon: MailIcon},
+    { href: "https://www.linkedin.com/in/robertas-ženčius-06974425a", Icon: SiLinkedin},
+]
+
+---
+<Card className='dark flex flex-col justify-center items-center w-full'>
+    <div class='rounded-full border bg-neutral-950 text-card-foreground shadow-sm p-4 m-2'>
+        <MessageCircleMoreIcon className='transition-all duration-300 hover:rotate-12 hover:scale-110 text-primary-500' size={48} />
+    </div>
+    <CardTitle className='text-center'>
+        <h3 class='font-bold whitespace-nowrap'>Let's Work Together</h3>
+        <p class='text-sm text-neutral-400 whitespace-nowrap'>and make your ideas come to <span class='text-primary-400'>reality</span></p>
+    </CardTitle>
+    <div class='outline-1 bg-green-800'>
+    </div>
+    <div class='my-5 flex justify-evenly w-full'>
+        {links.map(({ href, Icon}, index) => (
+            <a target='_blank' class={buttonVariants({ variant: 'default' })}  href={href}><Icon /></a>
+        ))}
+    </div>
+</Card>

@@ -1,4 +1,3 @@
-import React from 'react'
 import Marquee, { type MarqueeProps } from "@/components/ui/marquee";
 import { type IconType } from '@icons-pack/react-simple-icons';
 

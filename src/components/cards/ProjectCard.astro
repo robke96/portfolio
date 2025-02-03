@@ -1,0 +1,37 @@
+---
+import { CodeXml, Eye } from 'lucide-react';
+import { type projectCardI } from "@/assets/data/projectCards"
+import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
+import { buttonVariants } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+interface Props extends projectCardI {
+    className?: string;
+}
+
+const { title, description, img, className, badges, codeSrc, demoSrc } = Astro.props;
+---
+<Card className={`dark ${className}`}>
+    <div class='relative h-48 w-full shrink-0 overflow-hidden sm:h-56 p-2'>
+        <img class='size-full object-cover object-center rounded-xl' alt='img' src={img} />
+    </div>
+    <CardContent className='mt-4'>
+        <CardTitle className='mb-2'>{title}</CardTitle>
+        <CardDescription className='break-words'>{description}</CardDescription>
+
+        <div class='mt-4 flex flex-wrap gap-1.5'>
+            {badges.map(({label, Icon, style}) => (
+                <Badge variant="secondary" className={`text-center gap-2 ${style}`}>
+                    <Icon size={16} />
+                    <p>{label}</p>
+                </Badge>
+            ))}
+        </div>
+    </CardContent>
+    <div class='border-t'>
+        <div class='inline-flex w-full justify-evenly text-center p-6'>
+            <a class={`${buttonVariants({ variant: 'secondary'})} flex justify-center items-center gap-2`} target='_blank' href={demoSrc}><Eye size={32}/>Live Demo</a>
+            <a class={`${buttonVariants({ variant: 'secondary'})} flex justify-center items-center gap-2`} target='_blank' href={codeSrc} ><CodeXml size={32}/>Source</a>
+        </div>
+    </div>
+</Card>

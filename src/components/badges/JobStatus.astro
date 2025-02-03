@@ -1,0 +1,14 @@
+---
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+
+interface Props {
+    available: boolean;
+    className?: string;
+}
+
+const { available, className } = Astro.props;
+---
+{available ? <Badge className={cn("w-fit text-xs text-center", className)} variant="success">
+    Available To Work
+</Badge> : null}
