@@ -1,5 +1,6 @@
 ---
 import { CodeXml, Eye } from 'lucide-react';
+import { Image } from 'astro:assets';
 import { type projectCardI } from "@/assets/data/projectCards"
 import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
@@ -13,7 +14,7 @@ const { title, description, img, className, badges, codeSrc, demoSrc } = Astro.p
 ---
 <Card className={`dark ${className}`}>
     <div class='relative h-48 w-full shrink-0 overflow-hidden sm:h-56 p-2'>
-        <img class='size-full object-cover object-center rounded-xl' alt='img' src={img} />
+        <Image class='size-full object-cover object-center rounded-xl' alt='img' src={img} />
     </div>
     <CardContent className='mt-4'>
         <CardTitle className='mb-2'>{title}</CardTitle>

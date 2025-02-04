@@ -1,14 +1,17 @@
 ---
-import React from 'react'
+import { Image } from 'astro:assets';
 import { BoxesIcon, BriefcaseIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { buttonVariants } from '@/components/ui/button'
 import Marquee from '@/components/ui/marquee'
 
+import PortfolioPageImg from "@/assets/images/portfolio_page.webp";
+import ComingSoonImg from "@/assets/images/comingsoon.webp"
+
 const images = [
-    { src: "/img/portfolio_page.webp" },
-    { src: "/img/comingsoon.webp" },
-    { src: "/img/comingsoon.webp" },
+    { src: PortfolioPageImg },
+    { src: ComingSoonImg },
+    { src: ComingSoonImg },
 ]
 ---
 <Card className='dark'>
@@ -21,7 +24,7 @@ const images = [
     <CardContent className='relative pb-6 flex justify-center items-center'>
         <Marquee vignette className='relative items-center'>
         {images.map(({ src }) => (
-            <img class='h-24 w-full rounded-xl' src={src} alt='image'></img>
+            <Image class='h-24 w-full rounded-xl' src={src} alt='image' />
         ))}
         </Marquee>
         <a href="/projects" class={`absolute inset-x-0 bottom-4 z-50 mx-auto w-fit rounded-xl ${buttonVariants({ variant: 'secondary' })}`}>

@@ -1,9 +1,11 @@
 import { SiAstro, SiJavascript, SiNextdotjs, SiNodedotjs, SiShadcnui, SiTailwindcss, SiTypescript, type IconType } from "@icons-pack/react-simple-icons";
+import PortfolioPageImg from "@/assets/images/portfolio_page.webp";
+import type { ImageMetadata } from "astro";
 
 export interface projectCardI {
     title: string;
     description: string;
-    img: string;
+    img: ImageMetadata;
     badges: {
         label: string;
         Icon: IconType;
@@ -29,7 +31,7 @@ export const projectCardsData: projectCardI[] = [
     {
       title: "This Portfolio page",
       description: "",
-      img: "/img/portfolio_page.webp",
+      img: PortfolioPageImg,
       badges: [badges.typescript, badges.nodejs, badges.astro, badges.tailwind, badges.shadcn,],
       codeSrc: "https://github.com/robke96/portfolio",
       demoSrc: "/"
