@@ -6,8 +6,8 @@ import About from "@/components/cards/About.astro";
 import Projects from "@/components/cards/Projects.astro";
 import TechStack from "@/components/cards/TechStack.astro";
 import WorkTogether from "@/components/cards/WorkTogether.astro";
+import Clock from "@/components/cards/Clock.astro";
 
-import Clock from "@/components/cards/Clock";
 import Colors from "@/components/cards/Colors";
 ---
 
@@ -29,7 +29,7 @@ import Colors from "@/components/cards/Colors";
 				</div>
 				<div class="flex flex-col gap-4 md:w-1/2 min-w-0 motion-preset-slide-down-sm md:motion-preset-slide-up motion-delay-700">
 					<div class="flex-grow">
-						<Clock client:idle />
+						<Clock />
 					</div>
 					<TechStack />
 				</div>

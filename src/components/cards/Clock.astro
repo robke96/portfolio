@@ -1,0 +1,24 @@
+---
+import { Card } from "@/components/ui/card";
+---
+<Card className="dark flex py-6 text-3xl text-center justify-center items-center font-zodiak">
+    <time id="clock"></time>
+</Card>
+<script>
+    function updateClock() {
+
+        const element = document.getElementById("clock");
+        if (!element) return;
+
+        element.textContent = new Date().toLocaleTimeString('en', {
+            timeZone: 'Europe/Vilnius',
+            hour: '2-digit',
+            minute: '2-digit'
+            });
+        }
+
+    (function initClock() {
+        updateClock();
+        setInterval(updateClock, 1000);
+    })();
+</script>
