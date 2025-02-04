@@ -1,0 +1,20 @@
+---
+import Marquee, { type MarqueeProps } from "@/components/ui/marquee";
+import { type IconType } from '@icons-pack/react-simple-icons';
+
+interface Props extends MarqueeProps {
+    list: { Icon: IconType, name: string }[],
+};
+
+const { list, ...marqueeProps } = Astro.props; 
+---
+<div class='relative flex flex-col items-center justify-center'>
+    <Marquee {...marqueeProps}>
+      {list.map(({ Icon, name }) => (
+        <div class='flex space-x-3 text-center bg-bg-dark py-2 px-5 rounded-xl'>
+            <Icon />
+          <p>{name}</p>
+        </div>
+      ))}
+    </Marquee>
+</div>
