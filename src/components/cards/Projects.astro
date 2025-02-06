@@ -27,7 +27,7 @@ const images = [
             <Image class='h-24 w-full rounded-xl' src={src} alt='image' />
         ))}
         </Marquee>
-        <a href="/projects" class={`absolute inset-x-0 bottom-4 z-50 mx-auto w-fit rounded-xl ${buttonVariants({ variant: 'secondary' })}`}>
+        <a href="/projects" data-astro-prefetch class={`absolute inset-x-0 bottom-4 z-50 mx-auto w-fit rounded-xl ${buttonVariants({ variant: 'secondary' })}`}>
             <BoxesIcon />
             View Projects
         </a>

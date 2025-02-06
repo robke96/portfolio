@@ -9,5 +9,6 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind({ applyBaseStyles: false }), react()],
-  adapter: netlify()
+  adapter: netlify(),
+  prefetch: true,
 });
