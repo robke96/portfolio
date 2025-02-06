@@ -24,7 +24,7 @@ const images = [
     <CardContent className='relative pb-6 flex justify-center items-center'>
         <Marquee vignette className='relative items-center'>
         {images.map(({ src }) => (
-            <Image class='h-24 w-full rounded-xl' src={src} alt='image' />
+            <Image class='h-24 w-full rounded-xl' height={144} src={src} alt='image' />
         ))}
         </Marquee>
         <a href="/projects" data-astro-prefetch class={`absolute inset-x-0 bottom-4 z-50 mx-auto w-fit rounded-xl ${buttonVariants({ variant: 'secondary' })}`}>
