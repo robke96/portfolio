@@ -5,9 +5,9 @@ import { Card, CardTitle } from '@/components/ui/card'
 import { buttonVariants } from '@/components/ui/button'
 
 const links = [
-    { href: "https://discordapp.com/users/709811143295762454",  Icon: SiDiscord},
-    { href: "mailto:robertaszencius@gmail.com", Icon: MailIcon},
-    { href: "https://www.linkedin.com/in/robertas-ženčius-06974425a", Icon: SiLinkedin},
+    { href: "https://discordapp.com/users/709811143295762454", tooltip: "Contact me on Discord",  Icon: SiDiscord},
+    { href: "mailto:robertaszencius@gmail.com", tooltip: "Contact me via email", Icon: MailIcon},
+    { href: "https://www.linkedin.com/in/robertas-ženčius-06974425a", tooltip: "Contact me on LinkedIn", Icon: SiLinkedin},
 ]
 
 ---
@@ -22,8 +22,8 @@ const links = [
     <div class='outline-1 bg-green-800'>
     </div>
     <div class='my-5 flex justify-evenly w-full'>
-        {links.map(({ href, Icon}, index) => (
-            <a target='_blank' class={buttonVariants({ variant: 'default' })}  href={href}><Icon /></a>
+        {links.map(({ href, Icon, tooltip}) => (
+            <a title={tooltip} target='_blank' class={buttonVariants({ variant: 'default' })}  href={href}><Icon /></a>
         ))}
     </div>
 </Card>
