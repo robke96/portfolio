@@ -1,5 +1,6 @@
 ---
 import ThemeProvider from '@/providers/ThemeProvider'
+import { ClientRouter } from 'astro:transitions';
 import '../styles/main.css'
 ---
 <!doctype html>
@@ -16,6 +17,7 @@ import '../styles/main.css'
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 		<link rel="manifest" href="/favicon/site.webmanifest">
 		<title>Robke96 - Full-Stack Developer</title>
+		<ClientRouter />
 	</head>
 	<body class={`bg-bg-dark text-white font-geist`}>
 		<ThemeProvider client:load>
